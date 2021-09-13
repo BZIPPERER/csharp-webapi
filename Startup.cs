@@ -11,7 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Cors;
-
+//After setting uo Context class add imports
+using Microsoft.EntityFrameworkCore;
+using Brushless.Data;
 namespace Brushless
 {
     public class Startup
