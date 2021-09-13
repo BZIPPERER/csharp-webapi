@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Brushless.Models
 {
+    /* "A Customer can have a Country but may have no Region assigned" */
    public class Customer
    {
       [Key]

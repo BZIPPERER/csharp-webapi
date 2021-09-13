@@ -37,9 +37,12 @@ namespace Brushless
                 options.AddPolicy("Policy11",  
                 builder => builder.WithOrigins("http://localhost:4200"));  
             });*/ 
-            services.AddControllers();
-            //services.AddCors();
-        }
+            _services.AddControllers();
+             _services.AddRazorPages();
+
+            _services.AddDbContext<RazorDropContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("SQLVerbindung")));
+      }
 
         // This method 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
